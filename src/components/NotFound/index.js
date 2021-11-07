@@ -1,2 +1,2 @@
-import { NotFound } from "http-errors";
+import NotFound from "./NotFound";
 export default NotFound;

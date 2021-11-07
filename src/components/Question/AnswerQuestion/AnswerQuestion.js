@@ -4,7 +4,7 @@ import "./AnswerQuestion.css";
 const AnswerQuestion = () => {
   return (
     <div>
-      <h1>Hello from answer AnswerQuestion page</h1>
+      <h1>Hello from AnswerQuestion page</h1>
     </div>
   );
 };
