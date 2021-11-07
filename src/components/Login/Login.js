@@ -1,5 +1,7 @@
-import React from "react";
+import React, { Fragment } from "react";
 import "./Login.css";
+import { useSelector, useDispatch } from "react-redux";
+import Select from "react-select";
 
 const Login = () => {
   return (
@@ -12,6 +14,7 @@ const Login = () => {
       <div className="login-container">
         <h1>Welcome to the Would You Rather Game App</h1>
         <h1>Please login to play the game</h1>
+        <Select />
       </div>
     </div>
   );
