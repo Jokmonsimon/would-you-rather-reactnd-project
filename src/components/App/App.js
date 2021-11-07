@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
-import Header from "../Header";
-// import Login from "../Login";
+// import Header from "../Header";
+import Login from "../Login";
 // import Dashboard from "../Dashboard";
 // import NewQuestion from "../NewQuestion";
 // import LeaderBoard from "../LeaderBoard";
@@ -11,9 +11,9 @@ import Header from "../Header";
 function App() {
   return (
     <div className="App">
-      <Header />
-      {/* <Login />
-      <Dashboard />
+      {/* <Header /> */}
+      <Login />
+      {/* <Dashboard />
       <NewQuestion />
       <LeaderBoard />
       <Question />
