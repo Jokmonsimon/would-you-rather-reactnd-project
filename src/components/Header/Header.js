@@ -6,7 +6,7 @@ const Header = () => {
     <Container>
       <Content>
         <Logo>
-          <img src="/images/would-you-rather.png" />
+          <img src="/images/would-you-rather.png" alt="Would You Rather Logo" />
         </Logo>
       </Content>
     </Container>
