@@ -1,5 +1,4 @@
 .login {
-  background-color: white;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -16,6 +15,8 @@
 }
 
 .login-container {
+  background-color: white;
+  margin-top: 80px;
   width: 400px;
   height: fit-content;
   display: flex;
@@ -26,6 +27,39 @@
 }
 
 .login-container > h1 {
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.login-container > h1 > strong {
+  color: #20c4c4;
+}
+
+.login-container > p {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.sign-in-btn {
+  background: #0bf1f1;
+  border-radius: 2px;
+  width: 100%;
+  height: 30px;
+  border: 1px solid;
+  margin-top: 10px;
+  border-color: #07b0b9 #5fa0a5 #3baab4;
   font-weight: 600;
-  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.create-account-btn {
+  border-radius: 2px;
+  width: 100%;
+  height: 30px;
+  border: 1px solid;
+  margin-top: 10px;
+  border-color: darkgray;
+  font-weight: 600;
+  font-size: 16px;
 }
