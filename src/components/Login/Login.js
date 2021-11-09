@@ -1,20 +1,49 @@
-import React, { Fragment } from "react";
+import React, { useState } from "react";
 import "./Login.css";
+import Header from "../Header/Header";
 import { useSelector, useDispatch } from "react-redux";
 import Select from "react-select";
+import { loginUser } from "../../redux/actions/login";
 
 const Login = () => {
+  const options = [
+    { value: "ojok", label: "Ojok Simon Peter" },
+    { value: "yeni", label: "Eyena Samuel Baker" },
+    { value: "elisa", label: "Elisa Dimiti" },
+  ];
+
+  const [loginUser, setLoginUser] = React.useState({ name: "Select User" });
+  const { user } = useSelector((state) => state.authUser);
+  const { users } = useSelector((state) => state.users);
+
   return (
     <div className="login">
-      <img
-        className="login-logo"
-        src="/images/would-you-rather.png"
-        alt="Would You Rather Logo"
-      />
+      <Header />
       <div className="login-container">
-        <h1>Welcome to the Would You Rather Game App</h1>
-        <h1>Please login to play the game</h1>
-        <Select />
+        <img
+          className="login-logo"
+          src="/images/would-you-rather.png"
+          alt="Would You Rather Logo"
+        />
+        <h1>
+          Welcome To <strong>Would You Rather Game!</strong>
+        </h1>
+
+        {users
+          ? Object.enteries(users).map(([key, value]) => {
+              return (
+                <Select
+                  className="select"
+                  key={key}
+                  onClick={() => setLoginUser(value)}
+                  options={value.name}
+                />
+              );
+            })
+          : null}
+        <button className="sign-in-btn">Sign In</button>
+        <p>Want your own account?</p>
+        <button className="create-account-btn">Create Account</button>
       </div>
     </div>
   );
