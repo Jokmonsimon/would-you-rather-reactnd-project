@@ -28,19 +28,8 @@ const Login = () => {
         <h1>
           Welcome To <strong>Would You Rather Game!</strong>
         </h1>
+        <Select options={options} />
 
-        {users
-          ? Object.enteries(users).map(([key, value]) => {
-              return (
-                <Select
-                  className="select"
-                  key={key}
-                  onClick={() => setLoginUser(value)}
-                  options={value.name}
-                />
-              );
-            })
-          : null}
         <button className="sign-in-btn">Sign In</button>
         <p>Want your own account?</p>
         <button className="create-account-btn">Create Account</button>
